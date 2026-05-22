@@ -1,7 +1,7 @@
 const asyncHandler = (fn) => async (req,res,next)=>{
     try {
         await fn(req,res,next)
-        
+      
     } catch (error) {
         res.status(error.code || 500).json({
             success:false,
@@ -11,6 +11,8 @@ const asyncHandler = (fn) => async (req,res,next)=>{
     }
 
 }
+
+export default asyncHandler
 
 
 // response or error k liye class constructor likha gya h
