@@ -2,7 +2,7 @@ import dotenv from "dotenv"
 import mongoose from "mongoose";
 import { DB_NAME } from "./constants.js";
 import connectDB from "./db/index.js";
-
+import { app } from "./app.js";
 dotenv.config()
 
 
@@ -19,13 +19,6 @@ connectDB()
     console.log("MONGO DB CONNECTION FAILED",err);
     
 })
-
-
-
-
-
-
-
 
 
 
